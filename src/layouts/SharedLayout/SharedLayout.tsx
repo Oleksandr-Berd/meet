@@ -1,3 +1,4 @@
+import Gallery from "../../components/Gallery/Gallery";
 import Geometry from "../../components/Geometry/Geometry";
 import Hero from "../../components/Hero/Hero";
 import Info from "../../components/Info/Info";
@@ -12,6 +13,7 @@ const SharedLayout:React.FC = () => {
             <Hero/>
             <Info/>
             <Geometry layout={layouts["shared"]}/>
+            <Gallery/>
         </div>
      );
 }
