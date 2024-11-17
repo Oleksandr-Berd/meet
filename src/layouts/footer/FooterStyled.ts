@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 import footerBackMob from "../../assets/images/mobile/image-footer.jpg";
+import footerBackTab from "../../assets/images/tablet/image-footer.jpg";
+import footerBackDesk from "../../assets/images/desktop/image-footer.jpg";
 
 export const FooterCustom = styled.footer`
   position: relative;
@@ -28,6 +30,20 @@ export const FooterCustom = styled.footer`
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 66px;
+
+    background-image: url(${footerBackTab});
+  }
+
+  @media (min-width: 1280px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(${footerBackDesk});
+    background-size: cover;
+
+    text-align: left;
   }
 
   & > h3 {
@@ -46,6 +62,12 @@ export const FooterCustom = styled.footer`
       font-size: 40px;
       line-height: 1.1;
     }
+
+    @media (min-width: 1280px){
+        width: 350px;
+
+        margin-bottom: 0;
+    }
   }
 
   & > p {
@@ -62,6 +84,12 @@ export const FooterCustom = styled.footer`
 
       margin-bottom: 40px;
     }
+
+@media (min-width: 1280px){
+    width: 350px;
+
+    margin-bottom: 0;
+}
   }
 
   & a {
@@ -88,6 +116,18 @@ export const FooterCustom = styled.footer`
 
     & span {
       color: #d9b8ff;
+    }
+
+    @media (min-width: 1280px) {
+      transition: background-color 1s linear;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: #b18bdd;
+        cursor: pointer;
+        transition: background-color 1s linear;
+      }
     }
   }
 `;

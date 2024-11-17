@@ -8,10 +8,15 @@ import { ReactComponent as GalTab1 } from "../../assets/images/GalTab1.svg";
 import { ReactComponent as GalTab2 } from "../../assets/images/GalTab2.svg";
 import { ReactComponent as GalTab3 } from "../../assets/images/GalTab3.svg";
 import { ReactComponent as GalTab4 } from "../../assets/images/GalTab4.svg";
+import galDesk1Pic from "../../assets/images/desktop/image-man-texting.jpg"
+import galDesk2Pic from "../../assets/images/desktop/image-men-in-meeting.jpg";
+import galDesk3Pic from "../../assets/images/desktop/image-woman-in-videocall.jpg";
+import galDesk4Pic from "../../assets/images/desktop/image-women-videochatting.jpg";
+
 import { useScreenSize } from "../../utils/hooks/useScreenSize";
 
 const Gallery: React.FC = () => {
-const {isTablet} = useScreenSize()
+const {isTablet, isDesktop} = useScreenSize()
 
   return (
     <SC.GalleryCustom>
@@ -22,6 +27,13 @@ const {isTablet} = useScreenSize()
             <GalTab2 />
             <GalTab3 />
             <GalTab4 />{" "}
+          </>
+        ) : isDesktop ? (
+          <>
+            <img src={galDesk1Pic} alt="gallery" />
+            <img src={galDesk2Pic} alt="gallery" />
+            <img src={galDesk3Pic} alt="gallery" />
+            <img src={galDesk4Pic} alt="gallery" />
           </>
         ) : (
           <>

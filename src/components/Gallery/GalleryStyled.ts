@@ -12,6 +12,10 @@ export const GalleryCustom = styled.div`
 
     margin-bottom: 192px;
   }
+
+  @media (min-width: 1280px){
+    margin-bottom: 184px;
+  }
 `;
 
 export const GalleryCon = styled.div`
@@ -31,6 +35,18 @@ export const GalleryCon = styled.div`
     & * {
       &:not(:last-child) {
         margin-right: 11px;
+      }
+    }
+  }
+
+  @media (min-width: 1280px) {
+    justify-content: center;
+
+    margin-bottom: 80px;
+
+    & * {
+      &:not(:last-child) {
+        margin-right: 30px;
       }
     }
   }
@@ -85,6 +101,10 @@ export const GalleryContent = styled.div`
 
         margin-left: auto;
         margin-right: auto;
+    }
+
+    @media (min-width: 1280px){
+        font-size: 18px;
     }
   }
 `;

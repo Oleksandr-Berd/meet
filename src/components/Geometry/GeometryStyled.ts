@@ -13,15 +13,23 @@ export const GeometryLine = styled.div<IProps>`
   top: ${({ layout }) => (layout === "02" ? "0" : "null")};
 
   transform: ${({ layout }) =>
-    layout === "02" ? "translate(-50%, -168px) rotate(90deg)" : "rotate(90deg)"};
+    layout === "02"
+      ? "translate(-50%, -168px) rotate(90deg)"
+      : "rotate(90deg)"};
 
   width: 84px;
-
 
   margin-left: auto;
   margin-right: auto;
 
   border: 1px solid #87879d;
+
+  @media (min-width: 1280px) {
+    transform: ${({ layout }) =>
+      layout === "02"
+        ? "translate(595px, -168px) rotate(90deg)"
+        : "rotate(90deg)"};
+  }
 `;
 
 export const GeometryCircle = styled.div<IProps>`
@@ -54,4 +62,9 @@ export const GeometryCircle = styled.div<IProps>`
 
   border: 1px solid #87879d;
   border-radius: 50%;
+
+  @media (min-width: 1280px) {
+    transform: ${({ layout }) =>
+      layout === "02" ? "translate(668px, -66px)" : "translate(50%, 100px)"};
+  }
 `;

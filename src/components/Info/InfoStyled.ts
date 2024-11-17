@@ -7,11 +7,31 @@ export const InfoCon = styled.div`
   margin-bottom: 64px;
 
   text-align: center;
+  overflow: hidden;
 
   @media (min-width: 768px) {
     padding: 0;
 
     margin-bottom: 80px;
+  }
+
+  @media (min-width: 1280px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 0;
+
+    margin-bottom: 117px;
+
+    & > img:not(:last-child) {
+      margin-right: 28px;
+      margin-left: -32px;
+    }
+    & > img:last-child {
+      margin-left: 88px;
+      transform: translateX(-32px);
+    }
   }
 `;
 
@@ -33,6 +53,13 @@ export const InfoTitle = styled.h3`
     font-size: 48px;
     line-height: 1;
   }
+
+  @media (min-width: 1280px) {
+    width: 445px;
+
+    font-size: 64px;
+    line-height: 1;
+  }
 `;
 
 export const InfoContent = styled.p`
@@ -49,6 +76,13 @@ export const InfoContent = styled.p`
 
     margin-left: auto;
     margin-right: auto;
+  }
+
+  @media (min-width: 1220px) {
+    width: 540px;
+
+    font-size: 18px;
+    line-height: 1.44;
   }
 `;
 
@@ -94,6 +128,18 @@ export const InfoLinksCon = styled.div`
       margin-bottom: 0;
       margin-right: 16px;
     }
+
+    @media (min-width: 1280px) {
+      transition: background-color 1s linear;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: #71c0d4;
+        cursor: pointer;
+        transition: background-color 1s linear;
+      }
+    }
   }
   & > a:nth-child(2) {
     width: 139px;
@@ -113,5 +159,18 @@ export const InfoLinksCon = styled.div`
     background-color: #855fb1;
 
     border-radius: 29px;
+
+    @media (min-width: 1280px) {
+      transition: background-color 1s linear;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: #b18bdd;
+        cursor: pointer;
+
+        transition: background-color 1s linear;
+      }
+    }
   }
 `;
