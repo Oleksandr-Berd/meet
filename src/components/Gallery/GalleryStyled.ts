@@ -5,6 +5,13 @@ export const GalleryCustom = styled.div`
   padding-right: 24px;
 
   margin-bottom: 176px;
+
+  @media (min-width: 768px) {
+    padding-left: 40px;
+    padding-right: 40px;
+
+    margin-bottom: 192px;
+  }
 `;
 
 export const GalleryCon = styled.div`
@@ -13,6 +20,20 @@ export const GalleryCon = styled.div`
   gap: 24px;
 
   margin-bottom: 64px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-bottom: 48px;
+
+    & * {
+      &:not(:last-child) {
+        margin-right: 11px;
+      }
+    }
+  }
 `;
 
 export const GalleryContent = styled.div`
@@ -27,6 +48,10 @@ export const GalleryContent = styled.div`
     line-height: 1.63;
 
     color: #4d96a9;
+
+    @media (min-width: 768px) {
+      margin-bottom: 16px;
+    }
   }
 
   & > h4 {
@@ -37,6 +62,15 @@ export const GalleryContent = styled.div`
     line-height: 1.13;
 
     color: #28283d;
+
+    @media (min-width: 768px) {
+      width: 425px;
+      margin-left: auto;
+      margin-right: auto;
+
+      font-size: 40px;
+      line-height: 1.1;
+    }
   }
 
   & > p {
@@ -45,5 +79,12 @@ export const GalleryContent = styled.div`
     line-height: 1.63;
 
     color: #87879d;
+
+    @media (min-width: 768px){
+        width: 573px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
   }
 `;

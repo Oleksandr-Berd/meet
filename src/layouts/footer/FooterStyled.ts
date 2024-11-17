@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-import footerBackMob from "../../assets/images/mobile/image-footer.jpg"
+import footerBackMob from "../../assets/images/mobile/image-footer.jpg";
 
 export const FooterCustom = styled.footer`
-position: relative;
+  position: relative;
 
   display: flex;
   flex-direction: column;
@@ -24,12 +24,28 @@ position: relative;
 
   color: #fafafa;
 
+  @media (min-width: 768px) {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 66px;
+  }
+
   & > h3 {
     margin-bottom: 24px;
 
     font-family: "RedHatDisplay";
     font-size: 32px;
     line-height: 1.13;
+
+    @media (min-width: 768px) {
+      width: 457px;
+      margin-left: auto;
+      margin-right: auto;
+
+      margin-bottom: 32px;
+      font-size: 40px;
+      line-height: 1.1;
+    }
   }
 
   & > p {
@@ -38,6 +54,14 @@ position: relative;
     font-family: "RedHatDisplay";
     font-size: 18px;
     line-height: 1.44;
+
+    @media (min-width: 768px) {
+      width: 573px;
+      margin-left: auto;
+      margin-right: auto;
+
+      margin-bottom: 40px;
+    }
   }
 
   & a {

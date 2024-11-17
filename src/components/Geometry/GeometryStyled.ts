@@ -29,6 +29,7 @@ export const GeometryCircle = styled.div<IProps>`
 
   bottom: 0;
   right: 50%;
+  z-index: 5;
 
   transform: ${({ layout }) =>
     layout === "02" ? "translate(50%, -66px)" : "translate(50%, 100px)"};
@@ -49,6 +50,7 @@ export const GeometryCircle = styled.div<IProps>`
   margin-right: auto;
 
   color: #87879d;
+  background-color: #f2f2f2;
 
   border: 1px solid #87879d;
   border-radius: 50%;
