@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { IProps } from "../../utils/interfaces";
 
 export const Geometry = styled.div`
   position: relative;
@@ -6,10 +7,16 @@ export const Geometry = styled.div`
   margin-bottom: 164px;
 `;
 
-export const GeometryLine = styled.div`
+export const GeometryLine = styled.div<IProps>`
+  position: ${({ layout }) => (layout === "02" ? "absolute" : "static")};
+
+  top: ${({ layout }) => (layout === "02" ? "0" : "null")};
+
+  transform: ${({ layout }) =>
+    layout === "02" ? "translate(-50%, -168px) rotate(90deg)" : "rotate(90deg)"};
+
   width: 84px;
 
-  transform: rotate(90deg);
 
   margin-left: auto;
   margin-right: auto;
@@ -17,12 +24,14 @@ export const GeometryLine = styled.div`
   border: 1px solid #87879d;
 `;
 
-export const GeometryCircle = styled.div`
+export const GeometryCircle = styled.div<IProps>`
   position: absolute;
+
   bottom: 0;
   right: 50%;
 
-  transform: translate(50%, 100px);
+  transform: ${({ layout }) =>
+    layout === "02" ? "translate(50%, -66px)" : "translate(50%, 100px)"};
 
   width: 56px;
   height: 56px;

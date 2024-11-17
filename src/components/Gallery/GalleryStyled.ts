@@ -4,7 +4,7 @@ export const GalleryCustom = styled.div`
   padding-left: 24px;
   padding-right: 24px;
 
-  margin-bottom: 64px;
+  margin-bottom: 176px;
 `;
 
 export const GalleryCon = styled.div`
